@@ -18,7 +18,7 @@ let stories = [
       img: "3-scaffolding",
       imgDesc: "First, you lay down the foundations, build the structure and a scaffolding for yourself",
       lifecycle: "Render",
-      lifecycleDesc: "Render evaluates state and props, and returns JSX which is then translated into a DOM node (element) and connects it to callback functions. Render needs to act like a pure function (every time needs to produce the same outcome), which means that you cannot insert setState there. If you do, you'll enter the infinite loop of rerenders because changes in state make the component re-render"
+      lifecycleDesc: "Render evaluates state and props, and returns JSX which is then translated into a DOM node (element) and connects it to callback functions. The render function needs to be a pure function (return the same result for a given input and not cause any side effects), which means that you cannot call setState there. If you do, you'll enter the infinite loop of rerenders because changes in state make the component re-render"
     },
     {
       id: 4,
@@ -32,7 +32,8 @@ let stories = [
       img: "6-shouldUpdate",
       imgDesc: "Ooopsie! There was some miscommunication with the HQ and they sent too many foam rolls today. We won't need them but we don't have any better solution for now so we might as well just ignore them altogether and go about our business as we planned.",
       lifecycle: "shouldComponentUpdate",
-      lifecycleDesc: "shouldComponentUpdate checks the incoming props and state. In the method definition put a boolean expression that will help the component decide if it's time for a good rerender of it should chill and not jeopardize the app performance with its unnecessary actions"
+      lifecycleDesc: "shouldComponentUpdate checks the incoming props and state. In the method definition put a boolean expression that will help the component decide if it's time for a good re
+        of it should chill and not jeopardize the app performance with its unnecessary actions"
     },
     {
       id: 6,
